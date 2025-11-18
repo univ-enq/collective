@@ -6,6 +6,7 @@ const episodes = [
     title: "Episode 1 — Launching Collective Knowledge",
     description:
       "An introduction to Collective Knowledge: mission, team, and first projects.",
+    date: "2025-11-01",
     audio: "",
     link: "#",
   },
@@ -14,6 +15,7 @@ const episodes = [
     title: "Episode 2 — Research Collaboration",
     description:
       "How we build interdisciplinary teams and run collaborative research programs.",
+    date: "2025-10-15",
     audio: "",
     link: "#",
   },
@@ -34,8 +36,15 @@ const Podcast = () => {
         {episodes.map((ep) => (
           <div
             key={ep.id}
-            className="bg-gray-800/50 p-4 rounded-lg border border-gray-700"
+            className="relative bg-gray-800/50 p-4 rounded-lg border border-gray-700"
           >
+            {/* Date badge top-right */}
+            {ep.date && (
+              <div className="absolute top-3 right-3 bg-black/50 text-xs text-white px-2 py-1 rounded">
+                {new Date(ep.date).toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' })}
+              </div>
+            )}
+
             <div className="md:flex md:items-center md:justify-between">
               <div>
                 <h3 className="text-xl text-white font-semibold">{ep.title}</h3>

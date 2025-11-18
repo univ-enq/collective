@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const DeepakKumar = () => {
   const profileData = {
     name: "Dr. Deepak Kumar",
-    title: "Founder and Director of Collective Knowledge",
+    title: "Director & Founder of Collective Knowledge",
     image: deepakImg,
     twitter: "deepakrsdu",
     instagram: "deepakrsdu",

@@ -9,8 +9,9 @@ const LegalAdvisor = () => {
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
     // email removed
-    twitter: "manvee",
-    linkedin: "https://www.linkedin.com/in/manvee",
+    // twitter: "manvee",
+    linkedin: "https://www.linkedin.com/in/manvee99/",
+    email: "manvee@llbmania.com",
     image: manveeImg,
     bio: "Manvee is an upcoming Technology & Data Protection Lawyer and the Founder & Manager of LL.B Mania (Legal Blog). Her expertise lies in Technology, Media & Telecommunications law. She has gained valuable experience through internships with renowned top-tier law firms such as Nishith Desai Associates, Luthra and Luthra Law Offices, Spice Route Legal, IndusLaw, Lakshmikumaran & Sridharan Attorneys, Ikigai Law, Saikrishna & Associates, Scriboard Advocates, and Panda Law, as well as policy firms like The Esya Center & The Koan Advisory. She was a Finalist of the National Essay Writing Competition on Online Gaming organized by NUJS Kolkata in 2023. Manvee has an extensive publication record with reputed International and National Forums & Leading Dailies, including the Times of India, MNLU Law Review, Taxmann, and HeinOnline. Her work also appears in Scopus Indexed Journals and Book Chapters in leading publications. In her free time, you will find her playing Throwball or Volleyball in the playground. She is also a former National Level High Jumper and Long Jumper.",
   };
@@ -94,7 +95,7 @@ const LegalAdvisor = () => {
 
                   {/* Contact Information */}
                   <div className="flex items-center justify-center lg:justify-start gap-3 text-gray-300 mb-6">
-                    <a
+                    {/* <a
                       href={`https://twitter.com/${profileData.twitter}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -109,7 +110,7 @@ const LegalAdvisor = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
                       </svg>
                       @{profileData.twitter}
-                    </a>
+                    </a> */}
 
                     <span className="text-gray-500">•</span>
 

@@ -7,6 +7,20 @@ const Events = () => {
 
   const completedEvents = [
     {
+      id: 4,
+      title: "Webinar: PhD Admission Process – University of Delhi",
+      date: "2025-10-25",
+      time: "04:00 PM – 05:00 PM",
+      location: "Google Meet",
+      type: "Webinar",
+      description:
+        "Interested in doing a PhD from the University of Delhi? Don’t miss this informative session!",
+      speakers: ["Mr. Krishna Yadav – Research Scholar (PhD), Department of Political Science, University of Delhi"],
+      moderator: "Mr. Mukesh Thakur – Research Scholar (PhD), Department of Political Science, University of Delhi",
+      image:
+        "https://images.unsplash.com/photo-1559526324-497a7f7bdb9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
       id: 1,
       title:
         "Ambedkar's Vision: Social Justice and the Quest for Economic Democracy",

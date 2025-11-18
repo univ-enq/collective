@@ -10,7 +10,7 @@ const DirectorFounder = () => {
     title: "Director & Founder",
     image: deepakImg,
     education: [],
-    experience: "15+ years",
+    experience: "10+ years",
     // specialization: "Artificial Intelligence, Machine Learning, Data Science",
     twitter: "deepakkumar",
     instagram: "deepakkumar",

@@ -13,7 +13,7 @@ const People = () => {
       title: "Legal Advisor",
       image: manveeImg,
       specialization: "Legal Compliance, Intellectual Property, Contract Law",
-      experience: "8+ years",
+      experience: "5+ years",
       // email removed
       description:
         "Expert in legal compliance and intellectual property matters, ensuring our research activities adhere to all regulatory requirements.",
@@ -29,7 +29,7 @@ const People = () => {
       image: sahilImg,
       specialization:
         "Software Development, System Architecture, Technical Strategy",
-      experience: "10+ years",
+      experience: "3+ years",
       // email removed
       description:
         "Leading our technical initiatives and ensuring robust, scalable solutions for our research platform and digital infrastructure.",
@@ -191,8 +191,11 @@ const People = () => {
               team. Explore opportunities to contribute to meaningful research
               and innovation.
             </p>
-            <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-              View Open Positions
+            <button
+              onClick={() => navigate('/contact')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us
             </button>
           </div>
         </div>
