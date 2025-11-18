@@ -24,6 +24,7 @@ import Events from "./pages/Events";
 import Newsletter from "./pages/Newsletter";
 import Achievements from "./pages/AchievementsPlaceholder";
 import Contact from "./pages/Contact";
+import Podcast from "./pages/Podcast";
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/events" element={<Events />} />
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/achievements" element={<Achievements />} />
+            <Route path="/podcast" element={<Podcast />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
