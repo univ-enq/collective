@@ -22,7 +22,7 @@ import StudentCalendar from "./pages/StudentCalender";
 import LatestNews from "./pages/Latestnews";
 import Events from "./pages/Events";
 import Newsletter from "./pages/Newsletter";
-import Achievements from "./pages/Achievements";
+import Achievements from "./pages/AchievementsPlaceholder";
 import Contact from "./pages/Contact";
 
 const App = () => {

@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Carousel from "../component/Carousel";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen">
       {/* Hero Carousel Section */}
@@ -209,24 +211,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Call to Action Section */}
-        <div className="text-center bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg p-8 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Join Our Research Community
-          </h2>
-          <p className="text-xl text-gray-300 mb-6">
-            Discover opportunities to collaborate, learn, and contribute to
-            groundbreaking research.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-              Explore Research
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-              Contact Us
-            </button>
-          </div>
-        </div>
+        {/* Call to Action removed per request */}
       </div>
     </div>
   );

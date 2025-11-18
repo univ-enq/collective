@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logoImg from "../assets/Collective Knowledge.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -53,14 +54,16 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CK</span>
-              </div>
+            <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
+              <img
+                src={logoImg}
+                alt="Collective Knowledge"
+                className="h-8 w-8 rounded-md object-cover"
+              />
               <span className="ml-3 text-xl font-semibold text-white">
                 Collective Knowledge
               </span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -91,21 +94,29 @@ const Navbar = () => {
                           />
                         </svg>
                       </button>
-                      {activeDropdown === index && (
-                        <div className="absolute left-0 mt-2 w-56 bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
-                          <div className="py-1">
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200"
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
-                          </div>
+                      <div
+                        className="absolute left-0 mt-2 w-56 bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+                        style={{
+                          transformOrigin: 'top',
+                          transition: 'opacity 200ms ease, transform 220ms ease',
+                          opacity: activeDropdown === index ? 1 : 0,
+                          transform: activeDropdown === index ? 'translateY(0) scale(1)' : 'translateY(-6px) scale(0.98)',
+                          pointerEvents: activeDropdown === index ? 'auto' : 'none',
+                        }}
+                      >
+                        <div className="py-1">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
                         </div>
-                      )}
+                      </div>
                     </div>
                   ) : (
                     <Link
@@ -152,47 +163,61 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
-              {navigationItems.map((item, index) => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(index)}
-                        className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left"
-                      >
-                        {item.name}
-                      </button>
-                      {activeDropdown === index && (
-                        <div className="pl-4">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        {/* Mobile Navigation (animated expand/collapse) */}
+        <div className="md:hidden">
+          <div
+            className="px-2 pt-2 pb-3 sm:px-3 bg-gray-800 rounded-lg mt-2 overflow-hidden"
+            style={{
+              maxHeight: isOpen ? 1000 : 0,
+              opacity: isOpen ? 1 : 0,
+              transition: 'max-height 320ms cubic-bezier(.2,.8,.2,1), opacity 200ms ease',
+            }}
+            aria-hidden={!isOpen}
+          >
+            {navigationItems.map((item, index) => (
+              <div key={item.name}>
+                {item.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(index)}
+                      className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left"
                     >
                       {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
+                    </button>
+                    <div
+                      className="pl-4"
+                      style={{
+                        maxHeight: activeDropdown === index ? 800 : 0,
+                        opacity: activeDropdown === index ? 1 : 0,
+                        overflow: 'hidden',
+                        transition: 'max-height 260ms cubic-bezier(.2,.8,.2,1), opacity 200ms ease',
+                      }}
+                    >
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

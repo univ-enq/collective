@@ -1,4 +1,5 @@
 import React from "react";
+import deepakImg from "../assets/Deepak Kumar.jpg";
 import { useNavigate } from "react-router-dom";
 
 const DirectorFounder = () => {
@@ -7,12 +8,13 @@ const DirectorFounder = () => {
   const directorData = {
     name: "Dr. Deepak Kumar",
     title: "Director & Founder",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    image: deepakImg,
     education: [],
     experience: "15+ years",
-    specialization: "Artificial Intelligence, Machine Learning, Data Science",
-    email: "deepak.kumar@researchcenter.edu",
+    // specialization: "Artificial Intelligence, Machine Learning, Data Science",
+    twitter: "deepakkumar",
+    instagram: "deepakkumar",
+    // email: "deepak.kumar@researchcenter.edu",
     phone: "+1 (555) 123-4567",
     bio: "",
     achievements: [],
@@ -122,17 +124,43 @@ const DirectorFounder = () => {
 
                       {/* Contact Information */}
                       <div className="mb-8">
-                        <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-300">
-                          <svg
-                            className="w-4 h-4 text-blue-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                          </svg>
-                          <span className="text-sm">{directorData.email}</span>
-                        </div>
+                            <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-300">
+                              <svg
+                                className="w-4 h-4 text-blue-400"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                              >
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                              </svg>
+                              <div className="flex items-center gap-3">
+                                <a
+                                  href={`https://twitter.com/${directorData.twitter}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-blue-300 hover:underline"
+                                >
+                                  @{directorData.twitter}
+                                </a>
+                                <span className="text-gray-500">•</span>
+                                <a
+                                  href={`https://instagram.com/${directorData.instagram}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-pink-300 hover:underline flex items-center gap-2"
+                                >
+                                  <svg
+                                    className="w-4 h-4 text-pink-400"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                  >
+                                    <path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9A5.5 5.5 0 0116.5 22h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm4.5 5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm5-2a1.05 1.05 0 11-2.1 0 1.05 1.05 0 012.1 0z" />
+                                  </svg>
+                                  @{directorData.instagram}
+                                </a>
+                              </div>
+                            </div>
                       </div>
                     </div>
 

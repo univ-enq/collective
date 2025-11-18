@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImg from '../assets/Collective Knowledge.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ const Footer = () => {
 
   const programs = [
     { name: 'Internships', href: '/internships' },
-    { name: 'Fellows Program', href: '/fellows' },
+    { name: 'Fellows Program', href: '/fellowship' },
     { name: 'Student Calendar', href: '/student-calendar' },
     { name: 'Achievements', href: '/achievements' },
   ];
@@ -32,9 +33,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="h-10 w-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">CK</span>
-              </div>
+              <img src={logoImg} alt="Collective Knowledge" className="h-10 w-10 rounded-md object-cover" />
               <span className="ml-3 text-xl font-semibold text-white">Collective Knowledge</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">

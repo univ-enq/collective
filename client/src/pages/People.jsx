@@ -1,4 +1,6 @@
 import React from "react";
+import sahilImg from "../assets/Sahil Kumar Sakshi.jpg";
+import manveeImg from "../assets/Manvee.jpg";
 import { useNavigate } from "react-router-dom";
 
 const People = () => {
@@ -9,11 +11,10 @@ const People = () => {
       id: 1,
       name: "Manvee",
       title: "Legal Advisor",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      image: manveeImg,
       specialization: "Legal Compliance, Intellectual Property, Contract Law",
       experience: "8+ years",
-      email: "manvee@researchcenter.edu",
+      // email removed
       description:
         "Expert in legal compliance and intellectual property matters, ensuring our research activities adhere to all regulatory requirements.",
       route: "/legal-advisor",
@@ -25,12 +26,11 @@ const People = () => {
       id: 2,
       name: "Sahil Kumar Sakshi",
       title: "Technical Advisor",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      image: sahilImg,
       specialization:
         "Software Development, System Architecture, Technical Strategy",
       experience: "10+ years",
-      email: "sahil.sakshi@researchcenter.edu",
+      // email removed
       description:
         "Leading our technical initiatives and ensuring robust, scalable solutions for our research platform and digital infrastructure.",
       route: "/technical-advisor",
@@ -130,17 +130,24 @@ const People = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="flex items-center gap-2 text-gray-300 mb-6">
-              <svg
-                className={`w-4 h-4 text-${person.accentColor}-400`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-              <span className="text-sm">{person.email}</span>
-            </div>
+            {person.email ? (
+              <div className="flex items-center gap-2 text-gray-300 mb-6">
+                <svg
+                  className={`w-4 h-4 text-${person.accentColor}-400`}
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a
+                  href={`mailto:${person.email}`}
+                  className="text-sm text-gray-200 hover:underline"
+                >
+                  {person.email}
+                </a>
+              </div>
+            ) : null}
 
             {/* Description */}
             <p className="text-gray-400 text-sm leading-relaxed">

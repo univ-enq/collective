@@ -1,14 +1,16 @@
 import React from "react";
+import sahilImg from "../assets/Sahil Kumar Sakshi.jpg";
 import { Link } from "react-router-dom";
 
 const TechnicalAdvisor = () => {
   const profileData = {
     name: "Sahil Kumar Sakshi",
     title: "Technical Advisor",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    email: "shahil.ks011@gmail.com",
-    bio: "Sahil Kumar Sakshi serves as the Technical Advisor for Collective Knowledge, bringing over 10 years of extensive experience in software development, system architecture, and technical strategy. With a strong background in full-stack development, cloud computing, and emerging technologies, he leads our technical initiatives and ensures the platform maintains cutting-edge capabilitie while remaining scalable and secure. His expertise spans across various programming languages, frameworks, and technologies including modern web development, database management, API design, and DevOps practices. Sahil has been instrumental in architecting our research platform's technical infrastructure, implementing robust security measures, and optimizing system performance to handle complex research data and collaborative workflows. He works closely with researchers and administrators to understand their technical needs and translates them into innovative solutions that enhance productivity and research outcomes. His forward-thinking approach to technology adoption has helped establish a solid technical foundation that supports our organization's growth and enables seamless integration with partner institutions and research networks.",
+    image: sahilImg,
+    // removed email; use external profiles below
+    freelancer: "https://www.freelancer.in/u/sahilkumarsakshi",
+    linkedin: "https://www.linkedin.com/in/sahil-kumar-sakshi-155615338/",
+    bio: "Sahil Kumar Sakshi serves as the Technical Advisor for Collective Knowledge, bringing over 3 years of extensive experience in software development, system architecture, and technical strategy. With a strong background in full-stack development, cloud computing, and emerging technologies, he leads our technical initiatives and ensures the platform maintains cutting-edge capabilitie while remaining scalable and secure. His expertise spans across various programming languages, frameworks, and technologies including modern web development, database management, API design, and DevOps practices. Sahil has been instrumental in architecting our research platform's technical infrastructure, implementing robust security measures, and optimizing system performance to handle complex research data and collaborative workflows. He works closely with researchers and administrators to understand their technical needs and translates them into innovative solutions that enhance productivity and research outcomes. His forward-thinking approach to technology adoption has helped establish a solid technical foundation that supports our organization's growth and enables seamless integration with partner institutions and research networks.",
   };
 
   return (
@@ -89,16 +91,40 @@ const TechnicalAdvisor = () => {
                   </p>
 
                   {/* Contact Information */}
-                  <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-300 mb-6">
-                    <svg
-                      className="w-4 h-4 text-orange-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+                  <div className="flex items-center justify-center lg:justify-start gap-4 text-gray-300 mb-6">
+                    <a
+                      href={profileData.freelancer}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-amber-200 hover:underline"
                     >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span className="text-sm">{profileData.email}</span>
+                      <svg
+                        className="w-4 h-4 text-amber-300"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 2h4a2 2 0 012 2v2h2a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h2V4a2 2 0 012-2zm0 4V4h4v2h-4z" />
+                      </svg>
+                      Freelancer
+                    </a>
+
+                    <a
+                      href={profileData.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-blue-300 hover:underline"
+                    >
+                      <svg
+                        className="w-4 h-4 text-blue-400"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.336-.026-3.056-1.864-3.056-1.866 0-2.152 1.458-2.152 2.966v5.694h-3v-10h2.881v1.367h.041c.401-.76 1.379-1.561 2.84-1.561 3.038 0 3.6 2 3.6 4.59v5.604z" />
+                      </svg>
+                      LinkedIn
+                    </a>
                   </div>
                 </div>
               </div>

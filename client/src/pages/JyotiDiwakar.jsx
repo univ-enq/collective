@@ -7,7 +7,9 @@ const JyotiDiwakar = () => {
     title: "Co-Director of Collective Knowledge",
     image:
       "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    email: "jyoti.diwakar@researchcenter.edu",
+    twitter: "to be updated soon",
+    instagram: "to be updated soon",
+    // email: "jyoti.diwakar@researchcenter.edu",
     bio: "Dr. Jyoti Diwakar is a distinguished scholar and educator in Political Science, with a Ph.D. from the University of Delhi. Her research focuses on caste, gender, and violence, particularly the intersectionality of Dalit women's experiences in India. Through her academic work and publications, she critically examines power structures and societal dynamics, contributing to global conversations on justice and equality. She has presented her research at esteemed international platforms, including the India China Institute, The New School with ten collaborators, New York (USA) and the Center for European and Asian Studies, Paris (France). As an educator, she has taught both postgraduate and undergraduate students at the University of Delhi, covering subjects such as public policy, political theory, nationalism, and international relations. Her extensive teaching experience reflects her dedication to mentoring students and fostering critical thinking. As the Director of Collective Knowledge, Dr. Diwakar brings her expertise to foster inclusive dialogue, bridge academic and policy gaps, and lead knowledge-sharing initiatives. Passionate about social transformation, she continues to shape critical discussions on caste, gender, and political structures, making significant contributions to academia and beyond.",
   };
 
@@ -92,13 +94,39 @@ const JyotiDiwakar = () => {
                   <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-300 mb-6">
                     <svg
                       className="w-4 h-4 text-purple-400"
+                      viewBox="0 0 24 24"
                       fill="currentColor"
-                      viewBox="0 0 20 20"
+                      aria-hidden="true"
                     >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
                     </svg>
-                    <span className="text-sm">{profileData.email}</span>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={`https://twitter.com/${profileData.twitter}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-300 hover:underline"
+                      >
+                        @{profileData.twitter}
+                      </a>
+                      <span className="text-gray-500">•</span>
+                      <a
+                        href={`https://instagram.com/${profileData.instagram}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-pink-300 hover:underline flex items-center gap-2"
+                      >
+                        <svg
+                          className="w-4 h-4 text-pink-400"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9A5.5 5.5 0 0116.5 22h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm4.5 5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm5-2a1.05 1.05 0 11-2.1 0 1.05 1.05 0 012.1 0z" />
+                        </svg>
+                        @{profileData.instagram}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -201,33 +229,12 @@ const JyotiDiwakar = () => {
                 <h3 className="text-white font-semibold">Leadership</h3>
               </div>
               <p className="text-gray-300 text-sm">
-                Director of Collective Knowledge
+                Co-Director of Collective Knowledge
               </p>
             </div>
           </div>
 
-          {/* Contact Actions */}
-          <div className="mt-8 flex justify-center">
-            <a
-              href={`mailto:${profileData.email}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              Send Email
-            </a>
-          </div>
+          {/* Bottom social buttons removed — inline social links remain above */}
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import manveeImg from "../assets/Manvee.jpg";
 import { Link } from "react-router-dom";
 
 const LegalAdvisor = () => {
@@ -7,7 +8,10 @@ const LegalAdvisor = () => {
     title: "Legal Advisor",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    email: "manvee@researchcenter.edu",
+    // email removed
+    twitter: "manvee",
+    linkedin: "https://www.linkedin.com/in/manvee",
+    image: manveeImg,
     bio: "Manvee is an upcoming Technology & Data Protection Lawyer and the Founder & Manager of LL.B Mania (Legal Blog). Her expertise lies in Technology, Media & Telecommunications law. She has gained valuable experience through internships with renowned top-tier law firms such as Nishith Desai Associates, Luthra and Luthra Law Offices, Spice Route Legal, IndusLaw, Lakshmikumaran & Sridharan Attorneys, Ikigai Law, Saikrishna & Associates, Scriboard Advocates, and Panda Law, as well as policy firms like The Esya Center & The Koan Advisory. She was a Finalist of the National Essay Writing Competition on Online Gaming organized by NUJS Kolkata in 2023. Manvee has an extensive publication record with reputed International and National Forums & Leading Dailies, including the Times of India, MNLU Law Review, Taxmann, and HeinOnline. Her work also appears in Scopus Indexed Journals and Book Chapters in leading publications. In her free time, you will find her playing Throwball or Volleyball in the playground. She is also a former National Level High Jumper and Long Jumper.",
   };
 
@@ -89,16 +93,42 @@ const LegalAdvisor = () => {
                   </p>
 
                   {/* Contact Information */}
-                  <div className="flex items-center justify-center lg:justify-start gap-2 text-gray-300 mb-6">
-                    <svg
-                      className="w-4 h-4 text-emerald-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+                  <div className="flex items-center justify-center lg:justify-start gap-3 text-gray-300 mb-6">
+                    <a
+                      href={`https://twitter.com/${profileData.twitter}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-sky-300 hover:underline"
                     >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span className="text-sm">{profileData.email}</span>
+                      <svg
+                        className="w-4 h-4 text-sky-400"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                      </svg>
+                      @{profileData.twitter}
+                    </a>
+
+                    <span className="text-gray-500">•</span>
+
+                    <a
+                      href={profileData.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-blue-300 hover:underline"
+                    >
+                      <svg
+                        className="w-4 h-4 text-blue-400"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.336-.026-3.056-1.864-3.056-1.866 0-2.152 1.458-2.152 2.966v5.694h-3v-10h2.881v1.367h.041c.401-.76 1.379-1.561 2.84-1.561 3.038 0 3.6 2 3.6 4.59v5.604z" />
+                      </svg>
+                      LinkedIn
+                    </a>
                   </div>
                 </div>
               </div>

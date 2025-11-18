@@ -13,7 +13,7 @@ const StudentCalendar = () => {
         
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
           <p className="text-gray-400 text-lg">
-            Student Calendar page content coming soon...
+            This page to be updated soon...
           </p>
         </div>
       </div>
